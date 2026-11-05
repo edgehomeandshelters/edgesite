@@ -5,15 +5,15 @@ import TextReveal from "@/components/animations/TextReveal";
 import { properties } from "@/data/properties";
 const field =
   "w-full border-b border-ink/30 bg-transparent py-3 outline-none focus:border-gold";
-export default function InquirySection() {
+export default function InquirySection({ defaultProperty = "" }) {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm();
+  } = useForm({ defaultValues: { property: defaultProperty } });
   const [state, setState] = useState("idle");
-  
+  // DEMO: no backend yet. Replace with a POST to app/api/inquiry/route.js; keep the honeypot and add server-side validation.
   const onSubmit = async (d) => {
     if (d.website) return;
     await new Promise((r) => setTimeout(r, 600));
@@ -85,7 +85,7 @@ export default function InquirySection() {
           <select className={field} {...register("property")}>
             <option value="">Any</option>
             {properties.map((p) => (
-              <option key={p.id}>{p.name}</option>
+              <option key={p.slug}>{p.name}</option>
             ))}
           </select>
         </label>

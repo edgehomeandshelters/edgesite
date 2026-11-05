@@ -1,11 +1,10 @@
-// SAMPLE DATA. Replace with real projects and images.
 export const projects = [
   {
     id: "pr1",
-    title: "Sample Project One",
+    title: "BEVERLY HILLS ESTATE",
     location: "Location TBC",
-    status: "Completed",
-    image: null,
+    status: "Ongoing",
+    image: "/images/2.png",
   },
   {
     id: "pr2",

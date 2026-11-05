@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import TextReveal from "@/components/animations/TextReveal";
 import { properties } from "@/data/properties";
 import { naira } from "@/lib/utils";
@@ -56,12 +57,12 @@ function Card({ p, i }) {
           {p.bedrooms ? ` · ${p.bedrooms} bed` : ""}
         </p>
         <p className="mt-2 font-medium">{naira(p.priceNGN)}</p>
-        <a
-          href="#inquiry"
+        <Link
+          href={`/properties/${p.slug}`}
           className="mt-3 inline-block border-b border-gold pb-1 text-sm hover:text-gold"
         >
           View Property
-        </a>
+        </Link>
       </div>
     </motion.article>
   );
@@ -75,7 +76,7 @@ export default function FeaturedProperties() {
       />
       <div className="grid gap-10 md:grid-cols-3">
         {properties.map((p, i) => (
-          <Card key={p.id} p={p} i={i} />
+          <Card key={p.slug} p={p} i={i} />
         ))}
       </div>
     </section>

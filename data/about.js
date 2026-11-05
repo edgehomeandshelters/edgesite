@@ -1,4 +1,3 @@
-// PLACEHOLDER copy. Replace with the company's real vision and approach.
 export const about = {
   intro:
     "We develop residential property with a focus on considered design, sound construction and long-term value.",
@@ -16,4 +15,5 @@ export const about = {
       text: "Description of the development process to be supplied.",
     },
   ],
+  image: "/images/3.png",
 };
