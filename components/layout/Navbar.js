@@ -27,7 +27,7 @@ export default function Navbar() {
         className="flex items-center justify-between px-6 py-4 md:px-16"
       >
         <a href="/" className="font-display text-2xl">
-          {company.name}
+          {company.name}investment Nig.Ltd.
         </a>
         <ul className="hidden items-center gap-8 text-sm md:flex">
           {links.map(([l, h]) => (

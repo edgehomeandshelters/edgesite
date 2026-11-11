@@ -43,7 +43,7 @@ export const properties = [
     ],
   },
   {
-    slug: "land-500sqm",
+    slug: "land-500sqm-plot",
     name: "500SQM LAND",
     location: "AMANKPAKA UGWOGO NIKE, ENUGU",
     priceNGN: 15000000,
@@ -52,6 +52,11 @@ export const properties = [
     image: "/images/land.png",
     images: [],
     description: "A 500 square meter land plot.",
+    features: [
+      "CCTV Cameras",
+      "Asphalt Road Network",
+    ]
   },
+  
 ];
 export const getProperty = (slug) => properties.find((p) => p.slug === slug);
