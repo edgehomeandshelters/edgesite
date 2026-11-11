@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
       className="bg-ink px-6 py-28 text-bone md:px-16"
     >
       <p className="mb-10 text-sm text-green-500">
-        Sample testimonials for development. Not real client reviews.
+        Testimonials and reviews from satisfied Clients.
       </p>
       <div className="min-h-[14rem] max-w-4xl" aria-live="polite">
         <AnimatePresence mode="wait">

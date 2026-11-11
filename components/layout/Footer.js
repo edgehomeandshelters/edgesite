@@ -5,9 +5,7 @@ export default function Footer() {
       <div className="grid gap-10 md:grid-cols-3">
         <div>
           <p className="font-display text-3xl text-bone">{company.name}</p>
-          <p className="mt-3 max-w-xs text-sm">
-            Premium property development. Description to be supplied.
-          </p>
+          <p className="mt-3 max-w-xs text-sm">Inestment Nig.Ltd.</p>
         </div>
         <address className="text-sm not-italic leading-7">
           {company.address}
@@ -19,7 +17,7 @@ export default function Footer() {
         <ul className="text-sm leading-7">
           {company.socials.map((s) => (
             <li key={s.label}>
-              <a className="hover:text-gold" href={s.href}>
+              <a className="hover:text-green-500" href={s.href}>
                 {s.label}
               </a>
             </li>
@@ -37,7 +35,8 @@ export default function Footer() {
         </ul>
       </div>
       <p className="mt-12 text-xs">
-        © {new Date().getFullYear()} {company.name}. All rights reserved.
+        © {new Date().getFullYear()} {company.name}investment Nig.Ltd. All
+        rights reserved.
       </p>
     </footer>
   );

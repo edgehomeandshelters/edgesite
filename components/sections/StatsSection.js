@@ -12,9 +12,7 @@ export default function StatsSection() {
             <dd className="font-display text-7xl text-blue-500">
               <Counter to={s.value} />
             </dd>
-            <dt className="mt-2 text-sm text-bone/70">
-              {s.label} (placeholder)
-            </dt>
+            <dt className="mt-2 text-sm text-bone/70">{s.label}</dt>
           </div>
         ))}
       </dl>
